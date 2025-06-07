@@ -21,7 +21,7 @@ export default function Hero() {
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="md:text-6xl lg:text-7xl font-bold text-white mb-6 bg-[#ff1a1a00] text-center text-[60px]">
             AI 자동화의 모든 것,
             <br />
             <span className="pulse-animation text-[#bcb5ff]">퓨리온 AI</span>
