@@ -41,18 +41,18 @@ const testimonials = [
       "SNS 포스팅 자동화 기능이 신의 한 수였습니다.\n하루 2시간을 절약하고도 품질이 훨씬 좋아졌어요.",
   },
   {
-    name: "한상우",
-    title: "운영 매니저",
-    image: "/images/testimonial-6.png",
-    content:
-      "배송/CS 데이터 자동화 도입 이후 실수율이 현저히 줄었고,\n고객 불만도 크게 감소했습니다.",
-  },
-  {
     name: "윤소라",
     title: "마케팅 디렉터",
     image: "/images/testimonial-7.png",
     content:
       "캠페인 성과 분석과 자동 리포트 시스템으로\n팀 전반의 전략 실행력이 크게 향상됐습니다.",
+  },
+  {
+    name: "한상우",
+    title: "운영 매니저",
+    image: "/images/testimonial-6.png",
+    content:
+      "배송/CS 데이터 자동화 도입 이후 실수율이 현저히 줄었고,\n고객 불만도 크게 감소했습니다.",
   },
   {
     name: "정혜원",
@@ -99,7 +99,7 @@ export default function Testimonials() {
       >
         {testimonials.map((t, index) => (
           <SwiperSlide key={index} className="h-full">
-            <div className="bg-gray-50 p-6 rounded-2xl shadow-lg h-full min-h-[200px] flex flex-col justify-between pt-[15px] pb-[15px] pl-[24px] pr-[24px] ml-[0px] mr-[0px] mt-[10px] mb-[10px]">
+            <div className="bg-gray-50 p-6 rounded-2xl shadow-lg h-full min-h-[200px] flex flex-col justify-between pt-[20px] pb-[20px] mt-[16px] mb-[16px]">
               <div className="flex items-center mb-6">
                 <img
                   src={t.image}
