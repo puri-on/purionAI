@@ -6,67 +6,67 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    name: "최PM",
+    name: "김지훈",
     title: "프로덕트 매니저",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: "/images/testimonial-1.png",
     content:
-      "프로젝트 일정이 절반으로 줄었습니다. 퓨리온 AI 도입 이후 팀 효율이 확연히 올라갔어요.",
+      "프로젝트 일정이 절반으로 줄었습니다.\n퓨리온 AI 도입 이후 팀 효율이 확연히 올라갔어요.",
   },
   {
-    name: "이디자이너",
+    name: "박성민",
+    title: "데이터 엔지니어",
+    image: "/images/testimonial-2.png",
+    content:
+      "ETL 자동화 파이프라인 구축 덕에 반복 작업이 사라지고,\n고도화된 분석에만 집중할 수 있게 됐어요.",
+  },
+  {
+    name: "이수정",
     title: "UI 디자이너",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image: "/images/testimonial-3.png",
     content:
-      "디자인 툴 자동화 덕에 반복 업무가 사라졌습니다. 창의적인 일에 집중할 수 있어요.",
+      "디자인 QA와 컴포넌트 반복 제작이 사라졌습니다.\n감성적인 UX에 몰입할 수 있어 만족도가 높아요.",
   },
   {
-    name: "장팀장",
-    title: "전략기획팀",
-    image: "https://randomuser.me/api/portraits/men/55.jpg",
+    name: "정영철",
+    title: "전략기획실장",
+    image: "/images/testimonial-4.png",
     content:
-      "AI 자동화 리포트 덕분에 회의 준비 시간이 1/3로 줄었어요. 강력 추천합니다.",
+      "AI 기반 리포트 자동화 덕분에 매주 회의 준비 시간이 1시간 이상 줄었습니다.",
   },
   {
-    name: "김프리랜서",
-    title: "콘텐츠 크리에이터",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    name: "최윤호",
+    title: "콘텐츠 마케터",
+    image: "/images/testimonial-5.png",
     content:
-      "SNS 포스팅 자동화 기능이 신의 한 수였습니다. 하루 2시간은 벌었어요.",
+      "SNS 포스팅 자동화 기능이 신의 한 수였습니다.\n하루 2시간을 절약하고도 품질이 훨씬 좋아졌어요.",
   },
   {
-    name: "오퍼레이터",
+    name: "한상우",
     title: "운영 매니저",
-    image: "https://randomuser.me/api/portraits/men/77.jpg",
+    image: "/images/testimonial-6.png",
     content:
-      "운영팀에서 매일 반복하던 업무가 자동화돼 팀 만족도가 높아졌습니다.",
+      "배송/CS 데이터 자동화 도입 이후 실수율이 현저히 줄었고,\n고객 불만도 크게 감소했습니다.",
   },
   {
-    name: "이대표",
-    title: "중소기업 대표",
-    image: "https://randomuser.me/api/portraits/men/88.jpg",
+    name: "윤소라",
+    title: "마케팅 디렉터",
+    image: "/images/testimonial-7.png",
     content:
-      "퓨리온 AI는 저희 조직의 게임 체인저입니다. 더는 거대 기업 부럽지 않아요.",
+      "캠페인 성과 분석과 자동 리포트 시스템으로\n팀 전반의 전략 실행력이 크게 향상됐습니다.",
   },
   {
-    name: "최PM",
-    title: "프로덕트 매니저",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "정혜원",
+    title: "서비스 기획자",
+    image: "/images/testimonial-8.png",
     content:
-      "프로젝트 일정이 절반으로 줄었습니다. 퓨리온 AI 도입 이후 팀 효율이 확연히 올라갔어요.",
+      "사용자 피드백 수집 및 정리까지 자동화되면서\n제품 개선 사이클이 빨라졌어요.",
   },
   {
-    name: "이디자이너",
-    title: "UI 디자이너",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "이도윤",
+    title: "스타트업 대표",
+    image: "/images/testimonial-9.png",
     content:
-      "디자인 툴 자동화 덕에 반복 업무가 사라졌습니다. 창의적인 일에 집중할 수 있어요.",
-  },
-  {
-    name: "장팀장",
-    title: "전략기획팀",
-    image: "https://randomuser.me/api/portraits/men/55.jpg",
-    content:
-      "AI 자동화 리포트 덕분에 회의 준비 시간이 1/3로 줄었어요. 강력 추천합니다.",
+      "퓨리온 AI는 우리 회사의 비서 같은 존재입니다.\n인력 부족 문제를 기술로 해결했어요.",
   },
 ];
 
@@ -81,34 +81,37 @@ export default function Testimonials() {
           퓨리온 AI와 함께한 생생한 이야기
         </p>
       </div>
-
       <Swiper
         modules={[Autoplay, Pagination]}
+        autoHeight={false}
         spaceBetween={30}
         slidesPerView={1}
         loop={true}
         autoplay={{ delay: 3000 }}
-        pagination={{ clickable: true }}
+        pagination={{
+          el: ".custom-swiper-pagination",
+          clickable: true,
+        }}
         breakpoints={{
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
       >
         {testimonials.map((t, index) => (
-          <SwiperSlide key={index}>
-            <div className="bg-gray-50 p-8 rounded-2xl shadow-lg h-full flex flex-col justify-between">
+          <SwiperSlide key={index} className="h-full">
+            <div className="bg-gray-50 p-6 rounded-2xl shadow-lg h-full min-h-[200px] flex flex-col justify-between pt-[15px] pb-[15px] pl-[24px] pr-[24px] ml-[0px] mr-[0px] mt-[10px] mb-[10px]">
               <div className="flex items-center mb-6">
                 <img
                   src={t.image}
                   alt={t.name}
-                  className="w-16 h-16 rounded-full object-cover mr-4"
+                  className="w-16 h-16 rounded-full object-cover mr-4 flex-shrink-0"
                 />
                 <div>
                   <h4 className="font-semibold text-gray-900">{t.name}</h4>
                   <p className="text-gray-600">{t.title}</p>
                 </div>
               </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
                 "{t.content}"
               </p>
               <div className="flex text-yellow-400">
@@ -120,6 +123,7 @@ export default function Testimonials() {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="custom-swiper-pagination mt-8 flex justify-center"></div>
     </section>
   );
 }
