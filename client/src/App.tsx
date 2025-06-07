@@ -4,11 +4,23 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Landing from "@/pages/landing";
+import ContentAutomation from "@/pages/content-automation";
+import WebAppDev from "@/pages/web-app-dev";
+import Marketing from "@/pages/marketing";
+import DataTools from "@/pages/data-tools";
+import Support from "@/pages/support";
+import Security from "@/pages/security";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Landing} />
+      <Route path="/content-automation" component={ContentAutomation} />
+      <Route path="/web-app-dev" component={WebAppDev} />
+      <Route path="/marketing" component={Marketing} />
+      <Route path="/data-tools" component={DataTools} />
+      <Route path="/support" component={Support} />
+      <Route path="/security" component={Security} />
       <Route>
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
