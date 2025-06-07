@@ -28,12 +28,35 @@ export default function Footer() {
               효율적인 업무 환경을 만들어보세요.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
+              {[
+                {
+                  name: "Tistory",
+                  href: "https://purion.tistory.com/",
+                  icon: "fas fa-blog",
+                },
+                {
+                  name: "Threads",
+                  href: "https://www.threads.com/@purion.tech",
+                  icon: "fab fa-instagram",
+                },
+                {
+                  name: "YouTube",
+                  href: "https://www.youtube.com/@퓨리온_AI/videos",
+                  icon: "fab fa-youtube",
+                },
+                {
+                  name: "Website",
+                  href: "https://www.puritechlab.com",
+                  icon: "fas fa-globe",
+                },
+              ].map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
                   className="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center hover:bg-brand-light transition-colors"
                   aria-label={social.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className={social.icon}></i>
                 </a>
