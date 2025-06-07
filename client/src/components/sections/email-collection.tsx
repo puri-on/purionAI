@@ -74,9 +74,7 @@ export default function EmailCollection() {
     <section id="email-collection" className="py-20 bg-brand-blue">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            AI 자동화 인사이트를 받아보세요
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">  AI 자동화 상담을 받아보세요</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">지금 이메일을 남기시면 퓨리온 AI 전문가가 상담을 도와드립니다</p>
 
           <Form {...form}>
