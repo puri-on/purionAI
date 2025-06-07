@@ -77,9 +77,7 @@ export default function EmailCollection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             AI 자동화 인사이트를 받아보세요
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            최신 AI 트렌드와 자동화 기술 정보를 이메일로 전달해드립니다
-          </p>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">지금 이메일을 남기시면 퓨리온 AI 전문가가 상담을 도와드립니다</p>
 
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-md mx-auto">
@@ -112,7 +110,7 @@ export default function EmailCollection() {
                       처리중...
                     </>
                   ) : (
-                    "구독하기"
+                    "무료 상담 신청"
                   )}
                 </Button>
               </div>
