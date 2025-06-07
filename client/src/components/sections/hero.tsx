@@ -13,19 +13,18 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-          alt="Modern tech workspace"
-          className="w-full h-full object-cover opacity-20"
+          src="/images/background-image.png"
+          alt="Background"
+          className="w-full h-full object-cover opacity-100"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/80 to-brand-dark/80"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             AI 자동화의 모든 것,
             <br />
-            <span className="text-yellow-300 pulse-animation">퓨리온 AI</span>
+            <span className="pulse-animation text-[#bcb5ff]">퓨리온 AI</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -68,7 +67,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
         <ChevronDown size={32} />
