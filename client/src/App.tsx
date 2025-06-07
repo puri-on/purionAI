@@ -10,6 +10,7 @@ import Marketing from "@/pages/marketing";
 import DataTools from "@/pages/data-tools";
 import Support from "@/pages/support";
 import Security from "@/pages/security";
+import Contact from "@/pages/contact";
 
 function Router() {
   return (
@@ -21,6 +22,7 @@ function Router() {
       <Route path="/data-tools" component={DataTools} />
       <Route path="/support" component={Support} />
       <Route path="/security" component={Security} />
+      <Route path="/contact" component={Contact} />
       <Route>
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
