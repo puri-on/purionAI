@@ -211,7 +211,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">이메일</h3>
-                      <p className="text-gray-600">contact@purion.ai</p>
+                      <p className="text-gray-600">manager@puritechlab.com</p>
                       <p className="text-sm text-gray-500">24시간 내 답변</p>
                     </div>
                   </div>
@@ -233,8 +233,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">오피스</h3>
-                      <p className="text-gray-600">서울시 강남구 테헤란로 123</p>
-                      <p className="text-sm text-gray-500">퓨리온빌딩 12층</p>
+                      <p className="text-gray-600">서울 성북구 상월곡동 화랑로19길 68 2층</p>
+                      <p className="text-sm text-gray-500">퓨리테크랩</p>
                     </div>
                   </div>
                 </div>

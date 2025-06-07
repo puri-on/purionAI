@@ -95,7 +95,7 @@ export default function Support() {
               <div className="p-4">
                 <div className="text-blue-500 mb-2">📧</div>
                 <h4 className="font-semibold text-gray-900 mb-1">이메일</h4>
-                <p className="text-gray-600 text-sm">support@purion.ai</p>
+                <p className="text-gray-600 text-sm">manager@puritechlab.com</p>
               </div>
               <div className="p-4">
                 <div className="text-green-500 mb-2">📞</div>
