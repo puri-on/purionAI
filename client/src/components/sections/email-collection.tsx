@@ -117,9 +117,7 @@ export default function EmailCollection() {
                 </Button>
               </div>
               
-              <p className="text-blue-200 text-sm mt-4">
-                언제든지 구독을 취소할 수 있습니다. 개인정보는 안전하게 보호됩니다.
-              </p>
+              <p className="text-blue-200 text-sm mt-4">  남겨주신 이메일은 오직 상담 목적으로만 사용되며 안전하게 보호됩니다.</p>
             </form>
           </Form>
         </div>
