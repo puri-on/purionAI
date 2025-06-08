@@ -21,10 +21,12 @@ export default function Hero() {
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-in">
-          <h1 className="md:text-6xl lg:text-7xl font-bold text-white mb-6 bg-[#ff1a1a00] text-center text-[60px]">
-            AI 자동화의 모든 것,
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-center drop-shadow-2xl">
+            <span className="text-shadow-lg bg-gradient-to-r from-white to-gray-100 bg-clip-text text-transparent">
+              AI 자동화의 모든 것,
+            </span>
             <br />
-            <span className="pulse-animation text-[#bcb5ff]">퓨리온 AI</span>
+            <span className="pulse-animation text-[#bcb5ff] drop-shadow-xl">퓨리온 AI</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -52,13 +54,13 @@ export default function Hero() {
 
           <div className="grid grid-cols-3 text-center text-white mt-12 gap-6">
             <div>
-              <p className="font-bold text-[25px]">AI 자동화 전문</p>
+              <p className="font-bold text-[20px]">AI 자동화 전문</p>
             </div>
             <div>
-              <p className="font-bold text-[25px]">1:1 맞춤 제작</p>
+              <p className="font-bold text-[20px]">1:1 맞춤 제작</p>
             </div>
             <div>
-              <p className="font-bold text-[25px]">빠른 피드백 지원</p>
+              <p className="font-bold text-[20px]">빠른 피드백 지원</p>
             </div>
           </div>
         </div>
