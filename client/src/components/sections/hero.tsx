@@ -1,11 +1,12 @@
+import { useState } from "react";
 import { Rocket, Play, ChevronDown } from "lucide-react";
+import ConsultationModal from "@/components/consultation-modal";
 
 export default function Hero() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleConsultation = () => {
-    const emailSection = document.getElementById("email-collection");
-    if (emailSection) {
-      emailSection.scrollIntoView({ behavior: "smooth" });
-    }
+    setIsModalOpen(true);
   };
 
   return (
@@ -71,6 +72,12 @@ export default function Hero() {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
         <ChevronDown size={32} />
       </div>
+
+      {/* Consultation Modal */}
+      <ConsultationModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </section>
   );
 }
