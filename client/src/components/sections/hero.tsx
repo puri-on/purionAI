@@ -58,7 +58,7 @@ export default function Hero() {
               <p className="text-3xl font-bold">1:1 맞춤 제작</p>
             </div>
             <div>
-              <p className="text-3xl font-bold">빠른 피드백 지원</p>
+              <p className="font-bold text-[25px]">빠른 피드백 지원</p>
             </div>
           </div>
         </div>
