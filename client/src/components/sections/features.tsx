@@ -14,10 +14,10 @@ const features = [
     title: "콘텐츠 자동화",
     description:
       "AI 기반 콘텐츠 생성으로 블로그, 소셜미디어, 마케팅 자료를 자동으로 제작합니다.",
-    gradient: "from-blue-50 to-indigo-100",
-    iconBg: "bg-brand-blue",
+    gradient: "from-orange-50 to-red-100",
+    iconBg: "bg-orange-500",
     linkText: "자세히 보기",
-    linkColor: "text-brand-blue",
+    linkColor: "text-orange-600",
     linkUrl: "/content-automation",
   },
   {
@@ -25,10 +25,10 @@ const features = [
     title: "웹/앱 개발",
     description:
       "AI 코드 생성과 자동화 도구로 빠르고 안정적인 웹사이트와 앱을 개발합니다.",
-    gradient: "from-green-50 to-emerald-100",
-    iconBg: "bg-emerald-500",
+    gradient: "from-pink-50 to-rose-100",
+    iconBg: "bg-pink-500",
     linkText: "포트폴리오 보기",
-    linkColor: "text-emerald-600",
+    linkColor: "text-pink-600",
     linkUrl: "/web-app-dev",
   },
   {
@@ -36,44 +36,11 @@ const features = [
     title: "마케팅 자동화",
     description:
       "고객 행동 분석부터 개인화된 캠페인 실행까지 마케팅 전 과정을 자동화합니다.",
-    gradient: "from-purple-50 to-violet-100",
-    iconBg: "bg-violet-500",
-    linkText: "사례 연구",
-    linkColor: "text-violet-600",
-    linkUrl: "/marketing",
-  },
-  {
-    icon: Database,
-    title: "데이터 분석",
-    description:
-      "빅데이터와 AI 분석으로 비즈니스 인사이트를 도출하고 의사결정을 지원합니다.",
-    gradient: "from-orange-50 to-red-100",
-    iconBg: "bg-orange-500",
-    linkText: "분석 도구",
-    linkColor: "text-orange-600",
-    linkUrl: "/data-tools",
-  },
-  {
-    icon: Headphones,
-    title: "고객 지원",
-    description:
-      "AI 챗봇과 자동 응답 시스템으로 24/7 고객 서비스를 제공합니다.",
-    gradient: "from-pink-50 to-rose-100",
-    iconBg: "bg-pink-500",
-    linkText: "챗봇 체험",
-    linkColor: "text-pink-600",
-    linkUrl: "/support",
-  },
-  {
-    icon: Shield,
-    title: "보안 솔루션",
-    description:
-      "AI 기반 위협 탐지와 자동 보안 대응으로 시스템을 안전하게 보호합니다.",
     gradient: "from-teal-50 to-cyan-100",
     iconBg: "bg-teal-500",
-    linkText: "보안 진단",
+    linkText: "사례 연구",
     linkColor: "text-teal-600",
-    linkUrl: "/security",
+    linkUrl: "/marketing",
   },
 ];
 
