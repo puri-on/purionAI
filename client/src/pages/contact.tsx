@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -212,79 +212,28 @@ export default function Contact() {
               </p>
             </div>
 
-            {/* Contact Information */}
+            {/* Process Information */}
             <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  연락처 정보
-                </h2>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-blue-50 text-blue-600">
-                      <Phone className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">전화 상담</h3>
-                      <p className="text-gray-600">02-1234-5678</p>
-                      <p className="text-sm text-gray-500">평일 09:00 - 18:00</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-green-50 text-green-600">
-                      <Mail className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">이메일</h3>
-                      <p className="text-gray-600">manager@puritechlab.com</p>
-                      <p className="text-sm text-gray-500">24시간 내 답변</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-purple-50 text-purple-600">
-                      <MessageCircle className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">라이브 채팅</h3>
-                      <p className="text-gray-600">웹사이트 우하단 채팅 버튼</p>
-                      <p className="text-sm text-gray-500">실시간 상담 가능</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-lg bg-orange-50 text-orange-600">
-                      <MapPin className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">오피스</h3>
-                      <p className="text-gray-600">서울 성북구 상월곡동 화랑로19길 68 2층</p>
-                      <p className="text-sm text-gray-500">퓨리테크랩</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   상담 프로세스
                 </h3>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</div>
-                    <span className="text-gray-700">상담 신청서 작성</span>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
+                    <span className="text-gray-700 text-lg">상담 신청서 작성</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">2</div>
-                    <span className="text-gray-700">담당자 배정 및 연락</span>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
+                    <span className="text-gray-700 text-lg">담당자 배정 및 연락</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">3</div>
-                    <span className="text-gray-700">현황 분석 및 맞춤 제안</span>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
+                    <span className="text-gray-700 text-lg">현황 분석 및 맞춤 제안</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">4</div>
-                    <span className="text-gray-700">파일럿 프로젝트 진행</span>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
+                    <span className="text-gray-700 text-lg">파일럿 프로젝트 진행</span>
                   </div>
                 </div>
               </div>

@@ -1,4 +1,3 @@
-
 import { Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -96,7 +95,6 @@ export default function Footer() {
                   >
                     manager@puritechlab.com
                   </a>
-                  <p className="text-gray-400 text-sm">24시간 내 답변</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -105,8 +103,6 @@ export default function Footer() {
                   <p className="text-gray-300">오피스</p>
                   <span className="text-gray-300">
                     서울 성북구 상월곡동 화랑로19길 68 2층
-                    <br />
-                    퓨리테크랩
                   </span>
                 </div>
               </div>

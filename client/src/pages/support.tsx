@@ -5,21 +5,24 @@ const features = [
   {
     icon: MessageCircle,
     title: "AI 챗봇",
-    description: "24시간 언제든지 즉시 답변을 받을 수 있는 AI 챗봇 서비스입니다. 자주 묻는 질문부터 복잡한 기술적 문의까지 신속하게 처리합니다.",
+    description:
+      "24시간 언제든지 즉시 답변을 받을 수 있는 AI 챗봇 서비스입니다. 자주 묻는 질문부터 복잡한 기술적 문의까지 신속하게 처리합니다.",
     borderColor: "border-blue-500",
     iconColor: "text-blue-500",
   },
   {
     icon: Ticket,
     title: "고객 문의 티켓팅 자동화",
-    description: "고객 문의를 자동으로 분류하고 우선순위를 설정하여 효율적으로 처리합니다. 문의 유형별 자동 라우팅으로 빠른 해결을 보장합니다.",
+    description:
+      "고객 문의를 자동으로 분류하고 우선순위를 설정하여 효율적으로 처리합니다. 문의 유형별 자동 라우팅으로 빠른 해결을 보장합니다.",
     borderColor: "border-green-500",
     iconColor: "text-green-500",
   },
   {
     icon: BarChart2,
     title: "CS 성과 분석 리포트",
-    description: "고객 만족도, 응답 시간, 해결률 등 CS 성과를 실시간으로 분석합니다. 서비스 품질 개선을 위한 인사이트와 권장사항을 제공합니다.",
+    description:
+      "고객 만족도, 응답 시간, 해결률 등 CS 성과를 실시간으로 분석합니다. 서비스 품질 개선을 위한 인사이트와 권장사항을 제공합니다.",
     borderColor: "border-purple-500",
     iconColor: "text-purple-500",
   },
@@ -31,12 +34,10 @@ export default function Support() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-teal-50 to-cyan-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            고객 지원
-          </h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">고객 지원</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            24시간 AI 챗봇과 전문가 팀이 함께하는 완벽한 고객 서비스.
-            신속하고 정확한 지원으로 고객 만족도를 극대화합니다.
+            24시간 AI 챗봇과 전문가 팀이 함께하는 완벽한 고객 서비스. 신속하고
+            정확한 지원으로 고객 만족도를 극대화합니다.
           </p>
         </div>
       </section>
@@ -62,7 +63,9 @@ export default function Support() {
                   className={`bg-white p-8 rounded-2xl shadow-lg border-l-4 ${feature.borderColor} hover:shadow-xl transition-shadow duration-300`}
                 >
                   <div className="flex items-start space-x-4">
-                    <div className={`p-3 rounded-lg bg-gray-50 ${feature.iconColor}`}>
+                    <div
+                      className={`p-3 rounded-lg bg-gray-50 ${feature.iconColor}`}
+                    >
                       <IconComponent className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
@@ -81,36 +84,6 @@ export default function Support() {
         </div>
       </section>
 
-      {/* Contact Info Section */}
-      <section className="py-16 bg-blue-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              문의하기
-            </h3>
-            <p className="text-gray-600 mb-8 text-center">
-              궁금한 점이 있으시면 언제든지 연락주세요. 전문가가 신속하게 도움을 드리겠습니다.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div className="p-4">
-                <div className="text-blue-500 mb-2">📧</div>
-                <h4 className="font-semibold text-gray-900 mb-1">이메일</h4>
-                <p className="text-gray-600 text-sm">manager@puritechlab.com</p>
-              </div>
-              <div className="p-4">
-                <div className="text-green-500 mb-2">📞</div>
-                <h4 className="font-semibold text-gray-900 mb-1">전화</h4>
-                <p className="text-gray-600 text-sm">02-1234-5678</p>
-              </div>
-              <div className="p-4">
-                <div className="text-purple-500 mb-2">💬</div>
-                <h4 className="font-semibold text-gray-900 mb-1">라이브 채팅</h4>
-                <p className="text-gray-600 text-sm">웹사이트 우하단 채팅 버튼</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gray-50">
@@ -119,7 +92,8 @@ export default function Support() {
             고객 지원 시스템을 혁신하세요
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            전문가와 상담하여 귀하의 비즈니스에 최적화된 고객 지원 솔루션을 구축하세요
+            전문가와 상담하여 귀하의 비즈니스에 최적화된 고객 지원 솔루션을
+            구축하세요
           </p>
           <Link
             href="/contact"
