@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useModal } from "@/contexts/modal-context";
 import ConsultationModal from "@/components/consultation-modal";
+import Logo from "../../images/purion-logo.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,9 +22,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-brand-blue font-inter">
-              퓨리온 AI
-            </div>
+            <img src={Logo} alt="퓨리온 AI 로고" className="h-8 md:h-10" />
           </div>
           
           {/* Desktop Menu */}
