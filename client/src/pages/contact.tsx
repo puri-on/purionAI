@@ -21,23 +21,48 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "문의가 접수되었습니다",
-      description: "24시간 내에 담당자가 연락드리겠습니다.",
-    });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      service: "",
-      message: ""
-    });
-    setIsSubmitting(false);
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "상담 신청이 접수되었습니다",
+          description: "곧 연락드리겠습니다.",
+        });
+
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          service: "",
+          message: ""
+        });
+      } else {
+        toast({
+          title: "오류가 발생했습니다",
+          description: result.message || "잠시 후 다시 시도해주세요.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error("Contact form submission error:", error);
+      toast({
+        title: "네트워크 오류",
+        description: "인터넷 연결을 확인하고 다시 시도해주세요.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
