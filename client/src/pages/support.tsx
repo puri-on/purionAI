@@ -108,6 +108,9 @@ export default function Support() {
         </div>
       </section>
       
+      {/* Footer */}
+      <Footer />
+      
       {/* Scroll to Top */}
       <ScrollToTop />
     </div>

@@ -2,6 +2,7 @@ import { ArrowRight, Code, Smartphone, Globe, Layers, Zap, Shield, Cloud, CheckC
 import { Link } from "wouter";
 import ScrollToTop from "@/components/scroll-to-top";
 import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 import { useModal } from "@/contexts/modal-context";
 import ConsultationModal from "@/components/consultation-modal";
 
@@ -274,6 +275,9 @@ export default function WebAppDev() {
         isOpen={isConsultationModalOpen} 
         onClose={closeConsultationModal} 
       />
+      
+      {/* Footer */}
+      <Footer />
       
       {/* Scroll to Top */}
       <ScrollToTop />

@@ -136,6 +136,9 @@ export default function Security() {
         </div>
       </section>
       
+      {/* Footer */}
+      <Footer />
+      
       {/* Scroll to Top */}
       <ScrollToTop />
     </div>

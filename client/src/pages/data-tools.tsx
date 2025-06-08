@@ -2,6 +2,7 @@ import { ArrowRight, BarChart, TrendingUp, FileBarChart } from "lucide-react";
 import { Link } from "wouter";
 import ScrollToTop from "@/components/scroll-to-top";
 import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 
 const features = [
   {
@@ -102,6 +103,9 @@ export default function DataTools() {
           </Link>
         </div>
       </section>
+      
+      {/* Footer */}
+      <Footer />
       
       {/* Scroll to Top */}
       <ScrollToTop />
