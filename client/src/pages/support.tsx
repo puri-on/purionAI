@@ -1,5 +1,6 @@
 import { ArrowRight, MessageCircle, Ticket, BarChart2 } from "lucide-react";
 import { Link } from "wouter";
+import ScrollToTop from "@/components/scroll-to-top";
 
 const features = [
   {
@@ -104,6 +105,9 @@ export default function Support() {
           </Link>
         </div>
       </section>
+      
+      {/* Scroll to Top */}
+      <ScrollToTop />
     </div>
   );
 }
