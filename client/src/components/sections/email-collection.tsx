@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import ConsultationModal from "@/components/consultation-modal";
+import { useModal } from "@/contexts/modal-context";
 
 const emailSchema = z.object({
   email: z.string().email("올바른 이메일 주소를 입력해주세요."),
@@ -25,7 +25,7 @@ type EmailForm = z.infer<typeof emailSchema>;
 
 export default function EmailCollection() {
   const [showSuccess, setShowSuccess] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { openConsultationModal } = useModal();
   const { toast } = useToast();
 
   const form = useForm<EmailForm>({
@@ -107,7 +107,7 @@ export default function EmailCollection() {
               />
               <button
                 type="button"
-                onClick={() => setIsModalOpen(true)}
+                onClick={openConsultationModal}
                 className="bg-white text-brand-blue px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
               >
                 무료 상담 신청
@@ -122,11 +122,7 @@ export default function EmailCollection() {
         </div>
       </div>
 
-      {/* Consultation Modal */}
-      <ConsultationModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
-      />
+
     </section>
   );
 }

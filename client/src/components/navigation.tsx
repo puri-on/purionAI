@@ -5,14 +5,14 @@ import ConsultationModal from "@/components/consultation-modal";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { isConsultationModalOpen, openConsultationModal, closeConsultationModal } = useModal();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const openModal = () => {
-    setIsModalOpen(true);
+    openConsultationModal();
     setIsMenuOpen(false); // Close mobile menu when opening modal
   };
 
@@ -86,8 +86,8 @@ export default function Navigation() {
 
       {/* Consultation Modal */}
       <ConsultationModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+        isOpen={isConsultationModalOpen} 
+        onClose={closeConsultationModal} 
       />
     </nav>
   );

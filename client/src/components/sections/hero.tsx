@@ -1,11 +1,11 @@
 import { Rocket, Play, ChevronDown } from "lucide-react";
+import { useModal } from "@/contexts/modal-context";
 
 export default function Hero() {
+  const { openConsultationModal } = useModal();
+  
   const handleConsultation = () => {
-    const emailSection = document.getElementById("email-collection");
-    if (emailSection) {
-      emailSection.scrollIntoView({ behavior: "smooth" });
-    }
+    openConsultationModal();
   };
 
   return (
