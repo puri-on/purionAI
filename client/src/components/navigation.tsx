@@ -32,9 +32,6 @@ export default function Navigation() {
               <a href="#features" className="text-gray-700 hover:text-brand-blue transition-colors">
                 서비스
               </a>
-              <a href="#contact" className="text-gray-700 hover:text-brand-blue transition-colors">
-                연락처
-              </a>
               <button 
                 onClick={openModal}
                 className="bg-brand-blue text-white px-4 py-2 rounded-lg hover:bg-brand-dark transition-colors"
@@ -65,13 +62,6 @@ export default function Navigation() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 서비스
-              </a>
-              <a 
-                href="#contact" 
-                className="block px-3 py-2 text-gray-700 hover:text-brand-blue transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                연락처
               </a>
               <button 
                 onClick={openModal}
