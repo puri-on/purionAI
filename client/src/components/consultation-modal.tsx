@@ -131,16 +131,23 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
       <div 
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         onClick={onClose}
+        aria-label="모달 닫기"
       />
       
       {/* Modal */}
-      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+      <div 
+        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-t-2xl">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Rocket className="w-6 h-6" />
-              <h2 className="text-2xl font-bold">무료 상담 신청</h2>
+              <h2 id="modal-title" className="text-2xl font-bold">무료 상담 신청</h2>
             </div>
             <button
               onClick={onClose}
