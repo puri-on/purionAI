@@ -52,7 +52,7 @@ export default function Hero() {
 
           <div className="grid grid-cols-3 text-center text-white mt-12 gap-6">
             <div>
-              <p className="text-3xl font-bold">AI 자동화 전문</p>
+              <p className="font-bold text-[25px]">AI 자동화 전문</p>
             </div>
             <div>
               <p className="text-3xl font-bold">1:1 맞춤 제작</p>
