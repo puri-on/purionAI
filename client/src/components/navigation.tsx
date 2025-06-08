@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useModal } from "@/contexts/modal-context";
 import ConsultationModal from "@/components/consultation-modal";
 
 export default function Navigation() {
