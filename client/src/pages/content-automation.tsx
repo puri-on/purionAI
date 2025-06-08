@@ -2,6 +2,7 @@ import { ArrowRight, FileText, MessageSquare, Mail, Globe, Brain, Zap, Target, B
 import { Link } from "wouter";
 import { useModal } from "@/contexts/modal-context";
 import ConsultationModal from "@/components/consultation-modal";
+import ScrollToTop from "@/components/scroll-to-top";
 
 const features = [
   {
@@ -256,21 +257,13 @@ export default function ContentAutomation() {
             전문가와 1:1 상담을 통해 귀하의 비즈니스에 최적화된 
             콘텐츠 자동화 전략을 무료로 설계해드립니다
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={openConsultationModal}
-              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-50 transition-colors duration-200 shadow-lg"
-            >
-              무료 상담 신청
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </button>
-            <Link
-              href="/"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-600 transition-colors duration-200"
-            >
-              더 많은 서비스 보기
-            </Link>
-          </div>
+          <button
+            onClick={openConsultationModal}
+            className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl hover:bg-gray-50 transition-colors duration-200 shadow-lg"
+          >
+            무료 상담 신청
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </button>
         </div>
       </section>
 
@@ -279,6 +272,9 @@ export default function ContentAutomation() {
         isOpen={isConsultationModalOpen} 
         onClose={closeConsultationModal} 
       />
+      
+      {/* Scroll to Top */}
+      <ScrollToTop />
     </div>
   );
 }

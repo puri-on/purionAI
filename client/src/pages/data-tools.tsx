@@ -1,5 +1,6 @@
 import { ArrowRight, BarChart, TrendingUp, FileBarChart } from "lucide-react";
 import { Link } from "wouter";
+import ScrollToTop from "@/components/scroll-to-top";
 
 const features = [
   {
@@ -99,6 +100,9 @@ export default function DataTools() {
           </Link>
         </div>
       </section>
+      
+      {/* Scroll to Top */}
+      <ScrollToTop />
     </div>
   );
 }

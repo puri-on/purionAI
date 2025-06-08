@@ -1,5 +1,6 @@
 import { ArrowRight, Code, Layout, Paintbrush, Cloud } from "lucide-react";
 import { Link } from "wouter";
+import ScrollToTop from "@/components/scroll-to-top";
 
 const features = [
   {
@@ -106,6 +107,9 @@ export default function WebAppDev() {
           </Link>
         </div>
       </section>
+      
+      {/* Scroll to Top */}
+      <ScrollToTop />
     </div>
   );
 }
