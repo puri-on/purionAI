@@ -50,19 +50,15 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Trust indicators */}
-          <div className="mt-12 grid grid-cols-3 gap-8 max-w-md mx-auto text-white/80">
-            <div className="text-center">
-              <div className="text-2xl font-bold">500+</div>
-              <div className="text-sm">완료 프로젝트</div>
+          <div className="grid grid-cols-3 text-center text-white mt-12 gap-6">
+            <div>
+              <p className="text-3xl font-bold">AI 자동화 전문</p>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold">98%</div>
-              <div className="text-sm">고객 만족도</div>
+            <div>
+              <p className="text-3xl font-bold">1:1 맞춤 제작</p>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold">24/7</div>
-              <div className="text-sm">지원 서비스</div>
+            <div>
+              <p className="text-3xl font-bold">빠른 피드백 지원</p>
             </div>
           </div>
         </div>
