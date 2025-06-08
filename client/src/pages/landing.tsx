@@ -6,6 +6,7 @@ import Process from "@/components/sections/process";
 import EmailCollection from "@/components/sections/email-collection";
 import Testimonials from "@/components/sections/testimonials";
 import Footer from "@/components/sections/footer";
+import ScrollToTop from "@/components/scroll-to-top";
 
 export default function Landing() {
   useEffect(() => {
@@ -52,7 +53,7 @@ export default function Landing() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div id="top" className="min-h-screen bg-gray-50">
       <Navigation />
       <Hero />
       <Features />
@@ -60,6 +61,7 @@ export default function Landing() {
       <EmailCollection />
       <Testimonials />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
