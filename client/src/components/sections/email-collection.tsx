@@ -97,18 +97,22 @@ export default function EmailCollection() {
             method="POST"
             className="max-w-md mx-auto"
           >
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
               <input
                 type="email"
                 name="email"
                 required
                 placeholder="이메일 주소를 입력하세요"
-                className="px-6 py-4 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all border-none"
+                className="flex-1 px-6 py-4 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all border-none min-h-[56px]"
               />
               <button
                 type="button"
                 onClick={openConsultationModal}
-                className="bg-white text-brand-blue px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
+                className="bg-white text-brand-blue px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg whitespace-nowrap leading-none flex-shrink-0 min-h-[56px] flex items-center justify-center"
+                style={{
+                  WebkitFontSmoothing: 'antialiased',
+                  MozOsxFontSmoothing: 'grayscale'
+                }}
               >
                 무료 상담 신청
               </button>
