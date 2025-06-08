@@ -37,6 +37,7 @@ const features = [
 export default function WebAppDev() {
   return (
     <div className="min-h-screen bg-white">
+      <Navigation />
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-green-50 to-blue-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
