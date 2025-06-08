@@ -1,6 +1,7 @@
 import { ArrowRight, FileText, MessageSquare, Mail, Globe, Brain, Zap, Target, BarChart3, Clock, Users, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 import { useModal } from "@/contexts/modal-context";
+import ConsultationModal from "@/components/consultation-modal";
 
 const features = [
   {
@@ -105,7 +106,7 @@ const benefits = [
 ];
 
 export default function ContentAutomation() {
-  const { openConsultationModal } = useModal();
+  const { isConsultationModalOpen, openConsultationModal, closeConsultationModal } = useModal();
 
   return (
     <div className="min-h-screen bg-white">
@@ -272,6 +273,12 @@ export default function ContentAutomation() {
           </div>
         </div>
       </section>
+
+      {/* Consultation Modal */}
+      <ConsultationModal 
+        isOpen={isConsultationModalOpen} 
+        onClose={closeConsultationModal} 
+      />
     </div>
   );
 }
