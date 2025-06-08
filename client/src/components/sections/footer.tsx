@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   const services = [
@@ -87,14 +87,6 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-6">연락처 정보</h3>
             <div className="space-y-4">
               <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-brand-blue" />
-                <div>
-                  <p className="text-gray-300">전화 상담</p>
-                  <p className="text-gray-300">02-1234-5678</p>
-                  <p className="text-gray-400 text-sm">평일 09:00 - 18:00</p>
-                </div>
-              </div>
-              <div className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 text-brand-blue" />
                 <div>
                   <p className="text-gray-300">이메일</p>
@@ -105,14 +97,6 @@ export default function Footer() {
                     manager@puritechlab.com
                   </a>
                   <p className="text-gray-400 text-sm">24시간 내 답변</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="w-5 h-5 mr-3 mt-1 text-brand-blue">💬</div>
-                <div>
-                  <p className="text-gray-300">라이브 채팅</p>
-                  <p className="text-gray-400 text-sm">웹사이트 우하단 채팅 버튼</p>
-                  <p className="text-gray-400 text-sm">실시간 상담 가능</p>
                 </div>
               </div>
               <div className="flex items-start">
