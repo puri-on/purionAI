@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import ConsultationModal from "@/components/consultation-modal";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    setIsMenuOpen(false); // Close mobile menu when opening modal
   };
 
   return (
@@ -27,7 +34,10 @@ export default function Navigation() {
               <a href="#contact" className="text-gray-700 hover:text-brand-blue transition-colors">
                 연락처
               </a>
-              <button className="bg-brand-blue text-white px-4 py-2 rounded-lg hover:bg-brand-dark transition-colors">
+              <button 
+                onClick={openModal}
+                className="bg-brand-blue text-white px-4 py-2 rounded-lg hover:bg-brand-dark transition-colors"
+              >
                 무료 상담
               </button>
             </div>
@@ -62,13 +72,22 @@ export default function Navigation() {
               >
                 연락처
               </a>
-              <button className="block w-full text-left px-3 py-2 bg-brand-blue text-white rounded-lg hover:bg-brand-dark transition-colors">
+              <button 
+                onClick={openModal}
+                className="block w-full text-left px-3 py-2 bg-brand-blue text-white rounded-lg hover:bg-brand-dark transition-colors"
+              >
                 무료 상담
               </button>
             </div>
           </div>
         )}
       </div>
+
+      {/* Consultation Modal */}
+      <ConsultationModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </nav>
   );
 }
