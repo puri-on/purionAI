@@ -50,7 +50,7 @@ export default function Hero() {
               className="border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white hover:text-brand-blue transition-all flex items-center gap-2"
             >
               <Play size={20} />
-              🎬 유튜브 보기
+              유튜브 보기
             </a>
           </div>
 
