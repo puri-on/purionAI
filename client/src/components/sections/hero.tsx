@@ -23,10 +23,12 @@ export default function Hero() {
         <div className="fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-center drop-shadow-2xl">
             <span className="text-shadow-lg bg-gradient-to-r from-white to-gray-100 bg-clip-text text-transparent">
-              AI 자동화의 모든 것,
+              AI 자동화의 
+              <br className="sm:hidden" />
+              모든 것,
             </span>
             <br />
-            <span className="pulse-animation text-[#bcb5ff] drop-shadow-xl">퓨리온 AI</span>
+            <span className="pulse-animation bg-gradient-to-r from-[#bcb5ff] to-[#9b8fff] bg-clip-text text-transparent drop-shadow-xl">퓨리온 AI</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
