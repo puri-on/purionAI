@@ -87,8 +87,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
-      if (error.message === 'Email service is not configured') {
-        console.error("SendGrid API key not configured");
+      if (error.message === 'Email service is not configured' || error.message === 'Invalid email service configuration') {
+        console.error("SendGrid API key issue:", error.message);
         return res.status(500).json({ 
           message: "이메일 서비스가 설정되지 않았습니다. 관리자에게 문의하세요." 
         });
