@@ -33,7 +33,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
     message: ""
   });
 
-  // Handle ESC key press
+  // Handle ESC key press and body scroll prevention
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape' && isOpen) {
@@ -43,12 +43,18 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
 
     if (isOpen) {
       document.addEventListener('keydown', handleEscapeKey);
-      document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+      // Prevent body scrolling when modal is open
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      
+      return () => {
+        document.removeEventListener('keydown', handleEscapeKey);
+        document.body.style.overflow = originalOverflow;
+      };
     }
 
     return () => {
       document.removeEventListener('keydown', handleEscapeKey);
-      document.body.style.overflow = 'unset';
     };
   }, [isOpen, onClose]);
 
@@ -126,7 +132,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-hidden">
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
@@ -137,6 +143,14 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
       {/* Modal */}
       <div 
         className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+        style={{
+          position: 'fixed',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          maxWidth: 'min(640px, calc(100vw - 2rem))',
+          maxHeight: 'min(90vh, calc(100vh - 2rem))'
+        }}
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
