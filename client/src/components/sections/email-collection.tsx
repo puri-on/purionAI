@@ -82,53 +82,54 @@ export default function EmailCollection() {
 
   return (
     <section id="email-collection" className="py-20 bg-brand-blue">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="fade-in">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="fade-in text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {" "}
             AI 자동화 상담을 받아보세요
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             지금 이메일을 남기시면 퓨리온 AI 전문가가 상담을 도와드립니다
           </p>
 
-          <form
-            action="https://formspree.io/f/xpwrqnjk"
-            method="POST"
-            className="max-w-md mx-auto"
-          >
-            <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="이메일 주소를 입력하세요"
-                className="flex-1 h-12 px-4 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all border-none appearance-none"
-                style={{
-                  WebkitAppearance: 'none',
-                  MozAppearance: 'none'
-                }}
-              />
-              <button
-                type="button"
-                onClick={openConsultationModal}
-                className="bg-white text-brand-blue h-12 px-6 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg whitespace-nowrap leading-none flex-shrink-0 flex items-center justify-center align-middle"
-                style={{
-                  WebkitFontSmoothing: 'antialiased',
-                  MozOsxFontSmoothing: 'grayscale',
-                  WebkitAppearance: 'none',
-                  MozAppearance: 'none'
-                }}
-              >
-                무료 상담 신청
-              </button>
-            </div>
+          <div className="max-w-lg mx-auto">
+            <form
+              action="https://formspree.io/f/xpwrqnjk"
+              method="POST"
+              className="w-full"
+            >
+              <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="이메일 주소를 입력하세요"
+                  className="w-full sm:flex-1 h-12 px-4 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all border-none appearance-none text-center sm:text-left"
+                  style={{
+                    WebkitAppearance: 'none',
+                    MozAppearance: 'none'
+                  }}
+                />
+                <button
+                  type="button"
+                  onClick={openConsultationModal}
+                  className="w-full sm:w-auto bg-white text-brand-blue h-12 px-6 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg whitespace-nowrap leading-none flex-shrink-0 flex items-center justify-center"
+                  style={{
+                    WebkitFontSmoothing: 'antialiased',
+                    MozOsxFontSmoothing: 'grayscale',
+                    WebkitAppearance: 'none',
+                    MozAppearance: 'none'
+                  }}
+                >
+                  무료 상담 신청
+                </button>
+              </div>
 
-            <p className="text-blue-200 text-sm mt-4">
-              남겨주신 이메일은 오직 상담 목적으로만 사용되며 안전하게
-              보호됩니다.
-            </p>
-          </form>
+              <p className="text-blue-200 text-sm mt-4 text-center">
+                남겨주신 이메일은 오직 상담 목적으로만 사용되며 안전하게
+                보호됩니다.
+              </p>
+            </form>
+          </div>
         </div>
       </div>
 
