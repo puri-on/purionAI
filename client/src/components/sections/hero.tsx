@@ -55,7 +55,7 @@ export default function Hero() {
               <p className="font-bold text-[25px]">AI 자동화 전문</p>
             </div>
             <div>
-              <p className="text-3xl font-bold">1:1 맞춤 제작</p>
+              <p className="font-bold text-[25px]">1:1 맞춤 제작</p>
             </div>
             <div>
               <p className="font-bold text-[25px]">빠른 피드백 지원</p>
