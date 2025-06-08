@@ -5,7 +5,7 @@ import Features from "@/components/sections/features";
 import Process from "@/components/sections/process";
 import EmailCollection from "@/components/sections/email-collection";
 import Testimonials from "@/components/sections/testimonials";
-import Footer from "@/components/sections/footer";
+import Footer from "@/components/footer";
 import ScrollToTop from "@/components/scroll-to-top";
 
 export default function Landing() {

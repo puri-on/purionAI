@@ -4,6 +4,7 @@ import { useModal } from "@/contexts/modal-context";
 import ConsultationModal from "@/components/consultation-modal";
 import ScrollToTop from "@/components/scroll-to-top";
 import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 
 const features = [
   {
@@ -274,6 +275,9 @@ export default function ContentAutomation() {
         isOpen={isConsultationModalOpen} 
         onClose={closeConsultationModal} 
       />
+      
+      {/* Footer */}
+      <Footer />
       
       {/* Scroll to Top */}
       <ScrollToTop />
