@@ -42,7 +42,6 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
 
     if (isOpen) {
       document.addEventListener('keydown', handleEscapeKey);
-      // Prevent body scrolling when modal is open
       const originalOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
       
@@ -131,39 +130,45 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
   if (!isOpen) return null;
 
   return (
-    <div 
-      className="fixed inset-0 z-[9999] flex justify-center items-center overflow-y-auto p-4 bg-black/70 backdrop-blur-sm"
-      onClick={onClose}
-    >
-      <div
-        className="relative bg-white w-full max-w-2xl max-h-screen overflow-y-auto rounded-2xl shadow-2xl"
-        onClick={(e) => e.stopPropagation()}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modal-title"
-      >
-        {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-t-2xl">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Rocket className="w-6 h-6" />
-              <h2 id="modal-title" className="text-2xl font-bold">무료 상담 신청</h2>
+    <div>
+      {/* Background Overlay */}
+      <div 
+        className="fixed inset-0 z-40 bg-black/60"
+        onClick={onClose}
+        aria-label="모달 닫기"
+      />
+      
+      {/* Modal Container */}
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div
+          className="bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl"
+          onClick={(e) => e.stopPropagation()}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+        >
+          {/* Header */}
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-t-2xl">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Rocket className="w-6 h-6" />
+                <h2 id="modal-title" className="text-2xl font-bold">무료 상담 신청</h2>
+              </div>
+              <button
+                onClick={onClose}
+                className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+                aria-label="닫기"
+              >
+                <X className="w-6 h-6" />
+              </button>
             </div>
-            <button
-              onClick={onClose}
-              className="p-2 hover:bg-white/20 rounded-lg transition-colors"
-              aria-label="닫기"
-            >
-              <X className="w-6 h-6" />
-            </button>
+            <p className="mt-2 opacity-90">
+              AI 자동화 솔루션에 대해 전문가와 상담받아보세요
+            </p>
           </div>
-          <p className="mt-2 opacity-90">
-            AI 자동화 솔루션에 대해 전문가와 상담받아보세요
-          </p>
-        </div>
 
-        {/* Form */}
-        <form onSubmit={handleSubmit} className="p-6 space-y-6">
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="p-6 space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -305,7 +310,8 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 )}
               </Button>
             </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );
