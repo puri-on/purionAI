@@ -97,21 +97,27 @@ export default function EmailCollection() {
             method="POST"
             className="max-w-md mx-auto"
           >
-            <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+            <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
               <input
                 type="email"
                 name="email"
                 required
                 placeholder="이메일 주소를 입력하세요"
-                className="flex-1 px-6 py-4 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all border-none min-h-[56px]"
+                className="flex-1 h-12 px-4 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all border-none appearance-none"
+                style={{
+                  WebkitAppearance: 'none',
+                  MozAppearance: 'none'
+                }}
               />
               <button
                 type="button"
                 onClick={openConsultationModal}
-                className="bg-white text-brand-blue px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg whitespace-nowrap leading-none flex-shrink-0 min-h-[56px] flex items-center justify-center"
+                className="bg-white text-brand-blue h-12 px-6 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg whitespace-nowrap leading-none flex-shrink-0 flex items-center justify-center align-middle"
                 style={{
                   WebkitFontSmoothing: 'antialiased',
-                  MozOsxFontSmoothing: 'grayscale'
+                  MozOsxFontSmoothing: 'grayscale',
+                  WebkitAppearance: 'none',
+                  MozAppearance: 'none'
                 }}
               >
                 무료 상담 신청
