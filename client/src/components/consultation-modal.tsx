@@ -131,17 +131,12 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Backdrop */}
-      <div 
-        className="fixed inset-0 z-40 bg-black/60"
-        onClick={onClose}
-        aria-label="모달 닫기"
-      />
-      
-      {/* Modal Content */}
-      <div 
-        className="relative z-50 bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+    <div 
+      className="fixed inset-0 z-[9999] flex justify-center items-center overflow-y-auto p-4 bg-black/70 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div
+        className="relative bg-white w-full max-w-2xl max-h-screen overflow-y-auto rounded-2xl shadow-2xl"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
