@@ -192,7 +192,7 @@ export default function Contact() {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="구체적인 요구사항이나 궁금한 점을 자세히 적어주세요..."
+                    placeholder="궁금한 점이나 요청사항을 자유롭게 입력해주세요. 예: 견적 요청, 기능 문의 등"
                     className="w-full"
                   />
                 </div>
