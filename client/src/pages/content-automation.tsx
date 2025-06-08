@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { useModal } from "@/contexts/modal-context";
 import ConsultationModal from "@/components/consultation-modal";
 import ScrollToTop from "@/components/scroll-to-top";
+import Navigation from "@/components/navigation";
 
 const features = [
   {
@@ -111,6 +112,7 @@ export default function ContentAutomation() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Navigation />
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>

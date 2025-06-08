@@ -1,6 +1,7 @@
 import { ArrowRight, Code, Layout, Paintbrush, Cloud } from "lucide-react";
 import { Link } from "wouter";
 import ScrollToTop from "@/components/scroll-to-top";
+import Navigation from "@/components/navigation";
 
 const features = [
   {

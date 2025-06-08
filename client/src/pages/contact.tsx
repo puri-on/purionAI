@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import ScrollToTop from "@/components/scroll-to-top";
+import Navigation from "@/components/navigation";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
