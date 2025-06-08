@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import ScrollToTop from "@/components/scroll-to-top";
 import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -244,6 +245,9 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      
+      {/* Footer */}
+      <Footer />
       
       {/* Scroll to Top */}
       <ScrollToTop />

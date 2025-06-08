@@ -2,6 +2,7 @@ import { ArrowRight, MessageCircle, Ticket, BarChart2 } from "lucide-react";
 import { Link } from "wouter";
 import ScrollToTop from "@/components/scroll-to-top";
 import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 
 const features = [
   {
