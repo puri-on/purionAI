@@ -48,12 +48,8 @@ export default function Footer() {
                 <span>manager@puritechlab.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-4 h-4" />
-                <span>+82-2-1234-5678</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="w-4 h-4" />
-                <span>서울특별시 강남구 테헤란로</span>
+                <span>서울 성북구 상월곡동 화랑로19길 68 2층</span>
               </div>
             </div>
           </div>
