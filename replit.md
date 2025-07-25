@@ -26,7 +26,7 @@ A professional Korean AI-powered content automation platform that provides intel
 ✓ **SEO & Social Media Optimization:**
   - Added comprehensive favicon support (SVG, PNG, ICO formats)
   - Implemented Open Graph meta tags for better social sharing
-  - Created custom OG image (1200x630) with branding
+  - Updated OG URLs to production domain: www.purionlab.com
   - Added Twitter Card support for social platforms
   - Enhanced meta descriptions and keywords for Korean audience
 
