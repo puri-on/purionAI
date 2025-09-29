@@ -25,7 +25,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <a href="/" className="flex items-center space-x-3">
-              <img src={Logo} alt="퓨리온 AI 로고" className="h-8 md:h-10" />
+              <img src="/purion-logo-title_1749389762872.png" alt="퓨리온 AI 로고" className="h-8 md:h-10" />
               <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-brand-blue to-purple-600 bg-clip-text text-transparent">
                 PURION
               </span>
