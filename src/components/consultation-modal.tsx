@@ -57,7 +57,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      const response = await fetch("https://formspree.io/f/movkeajl", {
+      const response = await fetch("https://formspree.io/f/xpwrqnjk", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
