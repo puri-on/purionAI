@@ -59,6 +59,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  /*
   // Contact form endpoint
   app.post("/api/contact", async (req, res) => {
     if (req.method !== 'POST') {
@@ -87,6 +88,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       return res.status(500).json({ message: '메일 전송에 실패했습니다. 관리자에게 문의해주세요.' });
     }
   });
+  */
 
   const httpServer = createServer(app);
   return httpServer;
