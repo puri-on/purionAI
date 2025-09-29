@@ -1,7 +1,10 @@
 import { Mail, Phone, MapPin, Globe, Linkedin, Twitter, Facebook } from "lucide-react";
 import { useModal } from "@/contexts/modal-context";
-import Logo from "@assets/purion-logo-title_1749389762872.png";
-
+<img 
+  src="/purion-logo-title_1749389762872.png" 
+  alt="Purion Logo" 
+  className="h-8 md:h-10" 
+/>
 export default function Footer() {
   const { openConsultationModal } = useModal();
 
