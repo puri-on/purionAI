@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useModal } from "@/contexts/modal-context";
 import ConsultationModal from "@/components/consultation-modal";
-import Logo from "@attached_assets/purion-logo-title_1749389762872.png";
+<img src="/purion-logo-title_1749389762872.png" alt="로고" className="h-8 md:h-10" />
+
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
