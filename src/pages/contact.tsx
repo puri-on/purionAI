@@ -8,7 +8,8 @@ import Footer from "@/components/footer";
 import ScrollToTop from "@/components/scroll-to-top";
 
 export default function Contact() {
-  const [state, handleSubmit] = useForm("movkeajl"); // 👈 Formspree form ID
+  // Formspree form ID (대시보드에서 확인)
+  const [state, handleSubmit] = useForm("movkeajl");
 
   if (state.succeeded) {
     return (
@@ -22,6 +23,8 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+
+      {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-6xl mx-auto text-center px-4">
           <h1 className="text-5xl font-bold mb-6">무료 상담 신청</h1>
@@ -31,11 +34,15 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Contact Form */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4">
           <div className="bg-white rounded-2xl shadow-lg p-8">
             <h2 className="text-2xl font-bold mb-6">상담 신청서</h2>
+
+            {/* ✅ Formspree 연결 */}
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* 이름 + 회사명 */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block mb-2 font-medium">이름 *</label>
@@ -47,6 +54,7 @@ export default function Contact() {
                 </div>
               </div>
 
+              {/* 이메일 + 연락처 */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="email" className="block mb-2 font-medium">이메일 *</label>
@@ -59,6 +67,7 @@ export default function Contact() {
                 </div>
               </div>
 
+              {/* 관심 서비스 */}
               <div>
                 <label htmlFor="service" className="block mb-2 font-medium">관심 서비스</label>
                 <select
@@ -77,12 +86,14 @@ export default function Contact() {
                 </select>
               </div>
 
+              {/* 문의 내용 */}
               <div>
-                <label htmlFor="message" className="block mb-2 font-medium">문의 내용</label>
-                <Textarea id="message" name="message" rows={5} />
+                <label htmlFor="message" className="block mb-2 font-medium">문의 내용 *</label>
+                <Textarea id="message" name="message" rows={5} required />
                 <ValidationError prefix="Message" field="message" errors={state.errors} />
               </div>
 
+              {/* 제출 버튼 */}
               <Button
                 type="submit"
                 disabled={state.submitting}
